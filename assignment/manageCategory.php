@@ -4,68 +4,68 @@
 <div class="container-fluid name text-center">	
 <span class="text1"> Manage Category </span>
 </div>
+<form name="frm" action="deleteMultiCategory.php" method="POST" id="frm">
 <div class="container-fluid">
 	<div class="container Manage">
 		<div class="row right1">
 		<div class="manageBtn">
 			<ul>
+				<!-- <li>
+					<a href="main.php">Create Category</a>
+				</li>
+				<li>
+					<a href="deleteMultiCategory.php" onclick="document.getElementById('frm').submit(); return true;">Delete</a>
+				</li> -->
 				<li>
 					<a href="main.php">Create Category</a>
 				</li>
 				<li>
-					<a href="deleteCategory.php">Delete</a>
+					<input type="submit" value="Delete" class="delBtn"/>
 				</li>
+
 			</ul>
 			</div>
 		</div>
-			<div class="tableDiv">
-				<?php
-					require 'Dao/categoryDao.php';
-					$var=new categoryDao();
-					$result=$var->listCategory();
-				?>
-				<table class="table table-bordered table-hover">
-					<tr>
-						<th width='10%'><input type="checkbox"/></th>
-						<th width='60%'>NAME</th>
-						<th>Action</th>
-					</tr>
-					<?php
-					if($result->num_rows>0)
-					{
-						while($row=$result->fetch_assoc())
-						{
-						?>
-					<tr>
-						<td><input type="checkbox" value='<?php echo $row['cat_id'];?>'/></td>
-						<td><?php echo $row['cat_name'];?></td>
-						<td>
-							<div class="row" style="margin-left:0px">
-								<a href="deleteCategory.php?id=<?php echo $row['cat_id'];?>">
-									<div class="delicon">
-										<img src="images/delete_icon.png">
-									</div>
-								</a>
-							
-								<a href="editCategory.php?id=<?php echo $row['cat_id'];?>">
-									<div class="editicon">
-										<img src="images/edit_icon.png">
-									</div>
-								</a>
-							
-						</div>
-							
-
-							</td>
-					</tr>
-					<?php
-				}
+			<div class="tableDiv" id="tableDiv">loading...</div>
+			<?php
+			require "Dao/db.php";
+			global $conn;
+			$limit=2;
+			$sql=$conn->query("select * from category");
+			while($row=$sql->fetch_assoc())
+			{
+			$i+=1;
 			}
+			$count=$i;
+			$total_pages=ceil($count/$limit);
 			?>
-				</table>
-			</div>
-			
+			<div align="center">
+<ul class='pagination text-center' id="pagination">
+<?php if(!empty($total_pages)):for($i=1; $i<=$total_pages; $i++):  
+ if($i == 1):?>
+            <li class='active'  id="<?php echo $i;?>"><a href='pagination.php?page=<?php echo $i;?>'><?php echo $i;?></a></li> 
+ <?php else:?>
+ <li id="<?php echo $i;?>"><a href='pagination.php?page=<?php echo $i;?>'><?php echo $i;?></a></li>
+ <?php endif;?> 
+<?php endfor;endif;?>  
+</div>
+</div>
 		</div>
 
 	</div>
+</form>
+<script>
+$(document).ready(function() {
+$("#tableDiv").load("pagination.php?page=1");
+    $("#pagination li").on('click',function(e){
+ e.preventDefault();
+ $("#tableDiv").html('loading...');
+ $("#pagination li").removeClass('active');
+ $(this).addClass('active');
+        var pageNum = this.id;
+        jQuery("#tableDiv").load("pagination.php?page=" + pageNum);
+    });
+    });
+</script>
 	<?php include "footer.php";?>
+

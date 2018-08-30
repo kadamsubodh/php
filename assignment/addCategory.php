@@ -14,7 +14,7 @@ if($result>0)
 ?>
 <script>
 	alert("New Category Added");
-	document.location.href="main.php";
+	document.location.href="manageCategory.php";
 </script>
 <?php
 }

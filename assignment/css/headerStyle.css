@@ -393,10 +393,13 @@ margin:0px;
 .iconUl{
 	list-style:outside none none;
 	display:inline-block;
+
 }
 .iconul li a{
 list-style:outside none none;
 display:inline-block;
+text-decoration:none;
+
 }
 .delicon{
 	background-color: red;
@@ -419,4 +422,17 @@ display:inline-block;
 	margin-left:20px;
 	margin-right:30px;
 	padding-right:50px;
+}
+.hidden{
+	visibility: hidden;
+}
+.manageBtn ul li .delBtn{
+	 font-size: 18px;
+    line-height: 25px;
+    border-radius: 5px;
+    background-color: #9FBC35;
+    padding: 13px 18px;
+    color: #FFF;
+    display: inline-block;
+text-decoration:none;
 }
