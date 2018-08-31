@@ -30,7 +30,7 @@
 			<?php
 			require "Dao/db.php";
 			global $conn;
-			$limit=2;
+			$limit=4;
 			$sql=$conn->query("select * from category");
 			while($row=$sql->fetch_assoc())
 			{
@@ -63,7 +63,7 @@ $("#tableDiv").load("pagination.php?page=1");
  $("#pagination li").removeClass('active');
  $(this).addClass('active');
         var pageNum = this.id;
-        jQuery("#tableDiv").load("pagination.php?page=" + pageNum);
+        $("#tableDiv").load("pagination.php?page=" + pageNum);
     });
     });
 </script>

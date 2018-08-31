@@ -436,3 +436,83 @@ text-decoration:none;
     display: inline-block;
 text-decoration:none;
 }
+
+/*product classes*/
+.productSubDiv1{
+	padding-left:30px;
+	padding-right:80px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+margin-bottom: 20px;
+}
+.red{
+	border:1px solid red;
+	padding: 8px 0px 8px 10px;
+}
+.select{
+	    position: absolute;
+    background: #FFF url("../images/drop-down.png") no-repeat scroll 101% center;
+    z-index: 1;
+    border: 1px solid #CACBCD;
+    left: 0px;
+    width: 75%;
+    text-indent: 8px;
+    color: #5F636F;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: 32px;
+    border-radius: 3px;
+}
+/*.selectbox
+{
+	z-index: 10;
+	opacity: 0;
+	width:75%;
+	position: relative;
+}
+.k{
+	display: inline-block;
+}*/
+.styled-select {
+  background: transparent url("images/drop-down.png") no-repeat scroll 100% center;
+height: 40%;
+overflow: hidden;
+width: 35%;
+}
+
+.styled-select select {
+       font-size: 18px;
+    width: 105%;
+    height: 41px;
+    background: transparent none no-repeat scroll 0% 0%;
+    padding: 0px 0px 0px 0px;
+   /* border: medium none;*/
+}
+}
+
+.styled-select.slate {
+  
+   height: 34px;
+   width: 240px;
+}
+
+.styled-select.slate select {
+   border: 1px solid #ccc;
+   font-size: 16px;
+   height: 34px;
+   width: 268px;
+}
+.styled-select select option
+{
+	padding-right:6px;
+}
+.error{
+	color:red;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+.b{
+	padding: 8px 0px 8px 10px;
+}

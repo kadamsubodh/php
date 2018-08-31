@@ -1,12 +1,41 @@
 
-<script src="js/validation.js">
+<script>
+	$(document).ready(function(){
+$("#selectall").click(function(){
+        //alert("just for check");
+        if(this.checked){
+            $('.checkboxall').each(function(){
+                this.checked = true;
+            })
+        }else{
+            $('.checkboxall').each(function(){
+                this.checked = false;
+            })
+        }
+    });
+});
+$(document).ready(function(){
+$(".checkboxall").click(function(){
+	var v1=$('.checkboxall').length;
+	var check=$('.checkboxall').filter(':checked').length;
+	if(check==v1)
+	{
+
+		$('#selectall').prop("checked", true);
+	}
+	else{
+		$('#selectall').prop("checked", false);
+	}
+
+});
+});
 	</script>
 	<?php
 include('Dao/db.php');
 global $conn;
 
  
-$limit = 2;  
+$limit = 4;  
 if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
 $start_from = ($page-1) * $limit;  
 $rs_result = $conn->query("SELECT * FROM category ORDER BY cat_id ASC LIMIT $start_from, $limit");  
