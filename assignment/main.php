@@ -1,9 +1,8 @@
 
-<?php include 'header.php';?>
+<?php include "header.php";?>
 <div class="container-fluid name text-center">	
 <span class="text1"> Create Category </span>
 </div>
-
 <form action="addCategory.php" method="POST" name="frm">
 <div class="categoryDiv">
 	<div class="c1">

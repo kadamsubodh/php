@@ -56,7 +56,7 @@
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row r12">
 				<div class="col-sm-4">
 					<p class="footText1"> CONTACT US</p>
 				<div class="address">

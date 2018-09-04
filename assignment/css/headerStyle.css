@@ -115,10 +115,11 @@ text-decoration:none;
 }
 .calltext1{
 font-family: "Learning Curve Pro";
-font-size: 2em;
+font-size: 3em;
 font-weight: bold;
 text-align: left;
-color:white;
+color: #FFF;
+margin-left: 5%;
 }
 .footA{
 	text-decoration: none;
@@ -128,11 +129,12 @@ color:white;
 }
 .footBtn{
 	background-color: #9FBC35;
-	text-align:center;
-	width:80%;
-	height:50px;
-	border-radius: 5px;
-	padding-top:15px;
+text-align: center;
+width: 80%;
+height: 50px;
+border-radius: 5px;
+padding-top: 15px;
+margin-top: 7%;
 	
 }
 .footText{
@@ -227,51 +229,7 @@ float: left;
     text-decoration: none;
     padding: 0px 5px;
 }
-/*.Foot_Link7 {
-    border: 0px solid #F00;
-    height: auto;
-    margin: 0px 10px;
-    padding: 0px;
-    font-family: "roboto_slabregular";
-}
-.Foot_Link7 span {
-    color: #9B9B9B;
-}
-.Foot_Link7 ul.social_media {
-    margin-bottom: 0px;
-    display: inline-block;
-}
-.Foot_Link7 ul.social_media li a.fb {
-    background: transparent url("../images/social_media_icons.png") no-repeat scroll 0px 0px;
-}
-.Foot_Link7 ul.social_media li a {
-    display: block;
-    text-indent: -9999px;
-    width: 24px;
-    height: 24px;
-}
-.Foot_Link7 ul.social_media li a.twitter {
-    background: transparent url("../images/social_media_icons.png") no-repeat scroll -28px 0px;
-}
-.Foot_Link7 ul.social_media li a {
-    display: block;
-    text-indent: -9999px;
-    width: 24px;
-    height: 24px;
-}
-.Foot_Link7 ul.social_media li a.linkedin {
-    background: transparent url("../images/social_media_icons.png") no-repeat scroll -56px 0px;
-}
-.Foot_Link7 ul.social_media li a.you_tube {
-    background: transparent url("../images/social_media_icons.png") no-repeat scroll -83px 0px;
-}
-.Foot_Link7 ul.social_media li a.gplus {
-    background: transparent url("../images/social_media_icons.png") no-repeat scroll -111px 0px;
-}
-.Foot_Link7 ul.social_media {
-    margin-bottom: 0px;
-    display: inline-block;
-}*/
+
 .d2{
 	background-color: black;
 	text-align: center;
@@ -465,16 +423,7 @@ margin-bottom: 20px;
     top: 32px;
     border-radius: 3px;
 }
-/*.selectbox
-{
-	z-index: 10;
-	opacity: 0;
-	width:75%;
-	position: relative;
-}
-.k{
-	display: inline-block;
-}*/
+
 .styled-select {
   background: transparent url("images/drop-down.png") no-repeat scroll 100% center;
 height: 40%;
@@ -515,4 +464,8 @@ width: 35%;
 }
 .b{
 	padding: 8px 0px 8px 10px;
+}
+.r12{
+	margin-top: 2%;
+padding: 2% 5% 0% 5%;
 }

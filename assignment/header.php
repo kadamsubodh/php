@@ -26,11 +26,10 @@ session_start();
 			</div>
 			<div class="container-fluid">
 					<ul class="menu">
-					<li class="list "><a href="#home" class="active">Home</a></li>
-					<li class="list"><a href="#dating blog" class="anchor">Dating Blog</a></li class="list">
+					<li class="list "><a href="#home" class="active anchor">Home</a></li>
+					<li class="list"><a href="#dating blog" class="anchor">Dating Blog</a></li>
 					<li class="list"><a href="#help" class="anchor">Who We Help</a></li>
-					<li class="list"><a href=#why class="anchor">Why Vittal</a>
-					</li>
+					<li class="list"><a href=#why class="anchor">Why Vittal</a></li>
 					<li class="list"><a href="#review" class="anchor">Review</a></li>
 					<li class="list"><a href="#contact" class="anchor">Contact Us</a></li>
 					</ul>

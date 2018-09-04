@@ -1,7 +1,9 @@
 <?php
 require "Popo/productPopo.php";
 require "Dao/db.php";
+echo "db";
 require "Dao/productDao.php";
+echo "dao";
 $pname=$_POST['productName'];
 $pprice=$_POST['productPrice'];;
 $catid=$_POST['select'];
@@ -18,21 +20,24 @@ $filesize=$_FILES['file']['size'];
   $destination=getcwd()."/uploads/".basename($filename);
    move_uploaded_file($temppath, $destination);
    $file=$filename;
+   echo "moved";
 }
-
 $pp=new productPopo();
 $pp->setCatid($catid);
 $pp->setPname($pname);
 $pp->setPprice($pprice);
+$pp->setPpath($file);
 print_r($pp);
-$pd=new productDao()
+$pd=new productDao();
+
 $var=$pd->addProduct($pp);
+echo($var);
 if($var>0)
 {
 	?>
 	<script>
 		alert("product added");
-		document.location.href="addProduct.php";
+		document.location.href="product.php";
 	</script>
 	<?
 	else{
