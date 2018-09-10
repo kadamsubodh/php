@@ -1,4 +1,3 @@
-
 <script>
 	$(document).ready(function(){
 $("#selectall").click(function(){
@@ -32,38 +31,54 @@ $(".checkboxall").click(function(){
 	</script>
 	<?php
 include('Dao/db.php');
+include('Dao/categoryDao.php');
 global $conn;
 
  
 $limit = 4;  
 if (isset($_GET["page"])) { $page  = $_GET["page"]; } else { $page=1; };  
 $start_from = ($page-1) * $limit;  
-$rs_result = $conn->query("SELECT * FROM category ORDER BY cat_id ASC LIMIT $start_from, $limit");  
+$rs_result = $conn->query("SELECT * FROM product ORDER BY cat_id ASC LIMIT $start_from, $limit");  
 ?>
-<table class="table table-bordered table-hover">
+<table class="table table-bordered table-hover" >
 					<tr>
 						<th width='10%'><input type="checkbox" id="selectall"/></th>
-						<th width='60%'>NAME</th>
+						<th>NAME</th>
+						<th>Product Image</th>
+						<th>Product Price</th>
+						<th>Product Category</th>
 						<th>Action</th>
 					</tr>
 					<?php
 					if($rs_result->num_rows>0)
 					{
 						while($row=$rs_result->fetch_assoc())
-						{
+						{ 	$catid=$row['cat_id'];
+							$path="uploads/".$row['p_path'];
+								$cd=new categoryDao();
+								$var=$cd->selectCategoryById($catid);
+								if($var>0)
+								{
+									while($row1=$var->fetch_assoc()){
+										$catname=$row1['cat_name'];	
+									}
+								}
 						?>
 					<tr>
-						<td><input type="checkbox" value='<?php echo $row['cat_id'];?>' class="checkboxall" name="check_list[]"/></td>
-						<td><?php echo $row['cat_name'];?></td>
+						<td><input type="checkbox" value='<?php echo $row['p_id'];?>' class="checkboxall" name="check_list[]"/></td>
+						<td><?php echo $row['p_name'];?></td>
+						<td><div class="viewImage"><img src="<?php echo $path;?>" class="viewImage"></div></td>
+						<td><?php echo $row['p_price'];?></td>
+						<td><?php echo $catname;?></td>
 						<td>
-							<div class="row" style="margin-left:0px" id="<?php echo $row['cat_id'];?>">
-								<a href="deleteCategory.php?id=<?php echo $row['cat_id'];?>" onclick="return confirm('Are you sure want to delete this?');">
+							<div class="row" style="margin-left:0px" id="<?php echo $row['p_id'];?>">
+								<a href="deleteProduct.php?id=<?php echo $row['p_id'];?>" onclick="return confirm('Are you sure want to delete this?');">
 									<div class="delicon">
 										<img src="images/delete_icon.png">
 									</div>
 								</a>
 							
-								<a href="editCategory.php?id=<?php echo $row['cat_id'];?>" onclick="return confirm('Are sure want to edit this?');">
+								<a href="editProduct.php?id=<?php echo $row['p_id'];?>" onclick="return confirm('Are sure want to edit this?');">
 									<div class="editicon">
 										<img src="images/edit_icon.png">
 									</div>
@@ -71,7 +86,8 @@ $rs_result = $conn->query("SELECT * FROM category ORDER BY cat_id ASC LIMIT $sta
 							
 						</div>
 							
-					</td>
+
+							</td>
 					</tr>
 					<?php
 				}

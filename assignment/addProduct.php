@@ -8,7 +8,7 @@ $pname=$_POST['productName'];
 $pprice=$_POST['productPrice'];;
 $catid=$_POST['select'];
 $filename=$_FILES['file']['name'];
-$file="NA";
+$file="noimages.jpeg";
 if($filename!="")
 {
 $filesize=$_FILES['file']['size'];
@@ -37,13 +37,13 @@ if($var>0)
 	?>
 	<script>
 		alert("product added");
-		document.location.href="product.php";
+		document.location.href="manageProduct.php";
 	</script>
-	<?
+	<?php
+}
 	else{
 		echo "some problem is there";
 	}
-}
 
 ?>
 

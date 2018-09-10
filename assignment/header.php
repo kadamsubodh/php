@@ -11,31 +11,40 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/headerStyle.css">
+   <link rel="stylesheet" type="text/css" href="css/main.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="js/validation.js"></script>
 </head>
 <body>
-	<div class="container-fluid head1">
-	<div class="row">
-		<div class="col-sm-5 headerLogo">
-			<img src="images/logo.png" class="headerImg">
-		</div>
-		<div class="col-sm-7">
-			<div class=" container-fluid headtext">
-				<span class="calltext">Call Us Today!(02)9017 8413 </span>
-				<input type="text" class="search"/>
+		<header class="wrapper">
+		<div class="container-fluid bg-white">
+			<div class="col-md-5">
+				<img src="images/logo.png" class="img-responsive left">
 			</div>
-			<div class="container-fluid">
-					<ul class="menu">
-					<li class="list "><a href="#home" class="active anchor">Home</a></li>
-					<li class="list"><a href="#dating blog" class="anchor">Dating Blog</a></li>
-					<li class="list"><a href="#help" class="anchor">Who We Help</a></li>
-					<li class="list"><a href=#why class="anchor">Why Vittal</a></li>
-					<li class="list"><a href="#review" class="anchor">Review</a></li>
-					<li class="list"><a href="#contact" class="anchor">Contact Us</a></li>
-					</ul>
+			<div class="col-md-7">
+				<div class="row marginTop">
+					<div class="col-md-7 align-middle">
+						<p class="text">Call Us Today(02)9017 8143</p>
+					</div>
+					<div class="col-md-5 form-group">
+						<input type="text" class="form-control search">
+					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<nav>
+							<a href="#" class="active">HOME</a>
+							<a href="#">DATING BLOG</a>
+							<a href="#">WHO WE HELP</a>
+							<a href="#">WHY VITTAL</a>
+							<a href="#">REVIEWS</a>
+							<a href="#">CONTACT US</a>
+						</nav>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
+	</header>
 </body>
 </html>
