@@ -13,7 +13,13 @@ if($var)
 <?php
 }
 else{
-	echo "some problem is there";
+	?>
+	<script>
+		alert("This action cannot be performed!! Make sure that category is empty(no product under this category) before deleting");
+		document.location.href="manageCategory.php";
+	</script>
+	<?php
+
 }
 ?>
 

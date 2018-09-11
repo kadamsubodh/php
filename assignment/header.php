@@ -28,12 +28,13 @@ session_start();
 						<p class="text">Call Us Today(02)9017 8143</p>
 					</div>
 					<div class="col-md-5 form-group">
-						<input type="text" class="form-control search">
+						<input type="text" class="form-control search" placeholder="Type desired Job Location">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12">
+					<div class="col-md-11">
 						<nav>
+							
 							<a href="#" class="active">HOME</a>
 							<a href="#">DATING BLOG</a>
 							<a href="#">WHO WE HELP</a>
@@ -42,6 +43,16 @@ session_start();
 							<a href="#">CONTACT US</a>
 						</nav>
 					</div>
+					<div class="col-md-1 dropdown">
+							<button  class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+							 <ul class="dropdown-menu dropMenu">
+      							<li><a href="main.php">Add Category</a></li>
+    							  <li><a href="manageCategory.php">Manage Category</a></li>
+    							  <li><a href="product.php">Add Product</a></li>
+    							  <li><a href="manageProduct.php">ManageProduct</a></li>
+    						</ul>
+    					
+    				</div>
 				</div>
 			</div>
 		</div>

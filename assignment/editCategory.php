@@ -34,6 +34,7 @@ if($var->num_rows>0)
 				<div class="row center hr">
 					<div class="categoryBtn col-md-12 ">
 						<input type="submit" class="btn btn-success btn-lg" value="submit" id="submit"/>
+						<input type="button" class="btn btn-success btn-lg" value="cancel" id="cancel" onclick="location.href='manageCategory.php'"/>
 					</div>
 				</div>
 			</div>

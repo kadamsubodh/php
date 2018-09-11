@@ -39,8 +39,9 @@
 			$count=$i;
 			$total_pages=ceil($count/$limit);
 		?>
-		<div align="center">
-<ul class='pagination text-center' id="pagination">
+		<div align="left">
+<ul class='pagination paginationBtn text-center' id="pagination">
+	<li  id="1" ><a href='viewProduct.php?page=1'>First</a></li>
 <?php if(!empty($total_pages)):for($i=1; $i<=$total_pages; $i++):  
  if($i == 1):?>
             <li class='active'  id="<?php echo $i;?>"><a href='viewProduct.php?page=<?php echo $i;?>'><?php echo $i;?></a></li> 
@@ -48,6 +49,7 @@
  <li id="<?php echo $i;?>"><a href='viewProduct.php?page=<?php echo $i;?>'><?php echo $i;?></a></li>
  <?php endif;?> 
 <?php endfor;endif;?> 
+<li  id="<?php echo $total_pages;?>"><a href='viewProduct.php?page=<?php echo $total_pages;?>'>Last</a></li> 
 </ul> 
 </div>
 </div>

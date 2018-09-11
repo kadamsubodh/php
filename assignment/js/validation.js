@@ -84,7 +84,7 @@ else if(price=="")
 	$('#priceError').text("*This field required!");
 	event.preventDefault();
 }
-else if(!/^[-+]?[0-9]+\.[0-9]+$/g.test(price))
+else if(!/^[1-9]\d*(\.\d+)?$/g.test(price))
 {
 	$('#priceError').text("*only decimal values allowed");
 	event.preventDefault();
@@ -107,5 +107,23 @@ else if(category=="")
 	$('#selectError').text("Please select category ");
 	event.preventDefault();
 }
+});
+});
+
+function readURL(input) {
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('#product_image').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+$(document).ready(function(){
+$("#file").change(function() {
+  readURL(this);
 });
 });

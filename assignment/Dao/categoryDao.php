@@ -42,7 +42,7 @@ public function deleteCategory($id)
 	}
 	else
 	{
-		echo "Some problem is there";
+		return false;
 	}
 
 }

@@ -68,7 +68,7 @@ $rs_result = $conn->query("SELECT * FROM product ORDER BY cat_id ASC LIMIT $star
 						<td><input type="checkbox" value='<?php echo $row['p_id'];?>' class="checkboxall" name="check_list[]"/></td>
 						<td><?php echo $row['p_name'];?></td>
 						<td><div class="viewImage"><img src="<?php echo $path;?>" class="viewImage"></div></td>
-						<td><?php echo $row['p_price'];?></td>
+						<td style="text-align:right">Rs <?php echo $row['p_price'];?></td>
 						<td><?php echo $catname;?></td>
 						<td>
 							<div class="row" style="margin-left:0px" id="<?php echo $row['p_id'];?>">
